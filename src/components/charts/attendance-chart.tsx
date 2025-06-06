@@ -3,33 +3,11 @@
 import Image from "next/image";
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
-const data = [
-  {
-    name: "Mon",
-    present: 60,
-    absent: 40,
-  },
-  {
-    name: "Tue",
-    present: 70,
-    absent: 60,
-  },
-  {
-    name: "Wed",
-    present: 90,
-    absent: 75,
-  },
-  {
-    name: "Thu",
-    present: 90,
-    absent: 75,
-  },
-  {
-    name: "Fri",
-    present: 65,
-    absent: 55,
-  },
-];
+const data = ["Mon", "Tue", "Wed", "Thu", "Fri"].map(day => ({
+  name: day,
+  present: Math.floor(Math.random() * (90 - 40 + 1)) + 40,
+  absent: Math.floor(Math.random() * (90 - 40 + 1)) + 40,
+}));
 
 export default function AttendanceChart() {
   return (

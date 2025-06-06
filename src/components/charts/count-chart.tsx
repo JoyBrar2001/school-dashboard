@@ -5,8 +5,8 @@ import { RadialBar, RadialBarChart, ResponsiveContainer } from "recharts";
 
 const data = [
   { name: "Total", count: 100, fill: "white" },
-  { name: "Girls", count: 45, fill: "#FAE27C", },
-  { name: "Boys", count: 65, fill: "#C3EBFA", },
+  { name: "Girls", count: Math.floor(Math.random() * 100), fill: "#FAE27C", },
+  { name: "Boys", count: Math.floor(Math.random() * 100), fill: "#C3EBFA", },
 ];
 
 export default function CountChart() {
@@ -42,7 +42,7 @@ export default function CountChart() {
           </RadialBarChart>
         </ResponsiveContainer>
 
-        <Image 
+        <Image
           src={"/maleFemale.png"}
           alt=""
           width={50}
@@ -54,14 +54,26 @@ export default function CountChart() {
       <div className="flex justify-center gap-16">
         <div className="flex flex-col gap-1">
           <div className="w-5 h-5 bg-sky rounded-full" />
-          <h1 className="font-bold">1,234</h1>
-          <h2 className="text-xs text-gray-300">Boys (55%)</h2>
+
+          <h1 className="font-bold">
+            1,234
+          </h1>
+
+          <h2 className="text-xs text-gray-300">
+            Boys ({data[2].count}%)
+          </h2>
         </div>
 
         <div className="flex flex-col gap-1">
           <div className="w-5 h-5 bg-yellow rounded-full" />
-          <h1 className="font-bold">1,234</h1>
-          <h2 className="text-xs text-gray-300">Girls (45%)</h2>
+
+          <h1 className="font-bold">
+            1,234
+          </h1>
+
+          <h2 className="text-xs text-gray-300">
+            Girls ({data[1].count}%)
+          </h2>
         </div>
       </div>
     </div>
