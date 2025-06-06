@@ -1,10 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  --color-sky: #C3EBFA;
-  --color-sky-light: #EDF9FD;
-  --color-purple: #CFCEFF;
-  --color-purple-light: #F1F0FF;
-  --color-yellow: #FAE27C;
-  --color-yellow-light: #FEFCE8;
+  --color-sky: #c3ebfa;
+  --color-sky-light: #edf9fd;
+  --color-purple: #cfceff;
+  --color-purple-light: #f1f0ff;
+  --color-yellow: #fae27c;
+  --color-yellow-light: #fefce8;
+}
+
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+.react-calendar__navigation__label__labelText {
+  font-weight: 600;
+}
+
+.react-calendar__tile {
+  border-radius: 0.5rem;
+}
+
+.react-calendar__tile--now {
+  background-color: #fae27c !important;
+  color: black !important;
+}
+
+.react-calendar__tile--active {
+  background-color: #c3ebfa !important;
+  color: black !important;
 }
